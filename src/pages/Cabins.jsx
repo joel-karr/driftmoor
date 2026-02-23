@@ -48,7 +48,7 @@ export default function Cabins() {
             <Reveal>
               <span className="section__label">Our Philosophy</span>
               <h2 className="section__title">Built by Hand, Designed for Stillness</h2>
-              <p>Each Limberlost cabin was designed by regional architects who understand the land. Locally milled timber, floor-to-ceiling windows, and thoughtful siting ensure every cabin feels both grounded and open to the landscape. No detail is accidental — from the angle of morning light on your bed to the sound of wind through the screen porch.</p>
+              <p>Each Driftmoor cabin was designed by regional architects who understand the land. Locally milled timber, floor-to-ceiling windows, and thoughtful siting ensure every cabin feels both grounded and open to the landscape. No detail is accidental — from the angle of morning light on your bed to the sound of wind through the screen porch.</p>
               <p>Modern comforts are woven seamlessly into the rustic framework: radiant floor heating, rainfall showers, premium bedding, and a fully stocked pantry for morning coffee at your own pace.</p>
             </Reveal>
             <Reveal className="intro__image">
@@ -100,7 +100,7 @@ export default function Cabins() {
 
       <CTA
         title="Find Your Cabin"
-        text="Each stay includes access to all Limberlost amenities — dining, spa, cocktail bar, and 200 acres of trails."
+        text="Each stay includes access to all Driftmoor amenities — dining, spa, cocktail bar, and 200 acres of trails."
         buttonText="Check Availability"
       />
     </>

@@ -56,7 +56,7 @@ export default function Dining() {
             <Reveal>
               <span className="section__label">Our Kitchen</span>
               <h2 className="section__title">Grown Here, Served Here</h2>
-              <p>The Limberlost kitchen is led by a philosophy as old as the land itself: cook what the season gives you. Our half-acre garden, greenhouse, and partnerships with neighboring farms ensure that every plate reflects this place, right now.</p>
+              <p>The Driftmoor kitchen is led by a philosophy as old as the land itself: cook what the season gives you. Our half-acre garden, greenhouse, and partnerships with neighboring farms ensure that every plate reflects this place, right now.</p>
               <p>Dinner is served family-style in our restored timber hall, a communal gathering designed to slow you down. Breakfast is a quieter affair — delivered to your cabin each morning or enjoyed at the main lodge.</p>
             </Reveal>
           </div>
@@ -91,7 +91,7 @@ export default function Dining() {
           <div className="intro__grid">
             <Reveal>
               <span className="section__label">Breakfast</span>
-              <h2 className="section__title">Morning at Limberlost</h2>
+              <h2 className="section__title">Morning at Driftmoor</h2>
               <p>Wake to a basket delivered quietly to your cabin door: fresh pastries from our kitchen, seasonal fruit, house-made granola, and a thermos of locally roasted coffee. Or join us at the main lodge for a full breakfast service — eggs from our own hens, thick-cut bacon, and sourdough pancakes with maple syrup.</p>
             </Reveal>
             <Reveal className="intro__image">
