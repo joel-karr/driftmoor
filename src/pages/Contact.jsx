@@ -4,11 +4,11 @@ import Reveal from '../components/Reveal';
 
 const faqs = [
   { q: 'What is included in a cabin stay?', a: 'Every stay includes your cabin accommodation, daily breakfast (delivered or at the lodge), nightly dinner at The Table, access to the spa grounds and natural rock hot tub, use of all trails and outdoor amenities, firewood, and a welcome provisions basket.' },
-  { q: 'Is Limberlost family-friendly?', a: 'The Grove cabin is designed with families in mind and includes a lofted bunk room and family-friendly amenities. Our grounds are safe and welcoming for children of all ages. We do ask that The Hearth bar remain an adults-only space after 8 PM.' },
+  { q: 'Is Driftmoor family-friendly?', a: 'The Grove cabin is designed with families in mind and includes a lofted bunk room and family-friendly amenities. Our grounds are safe and welcoming for children of all ages. We do ask that The Hearth bar remain an adults-only space after 8 PM.' },
   { q: 'What should I bring?', a: "We provide all linens, towels, toiletries, and robes. We recommend comfortable outdoor clothing, sturdy walking shoes, and layers for cool evenings. Swimwear for the hot tub. Everything else, we've thought of." },
   { q: 'Is there Wi-Fi and cell service?', a: 'Yes. High-speed Wi-Fi is available in all cabins and common areas. Cell service is available but can be spotty in some areas of the grounds. We consider this a feature.' },
   { q: 'What is your cancellation policy?', a: 'Reservations cancelled more than 14 days before check-in receive a full refund. Cancellations within 14 days are eligible for a credit toward a future stay. Same-day cancellations are non-refundable.' },
-  { q: 'Can I host an event at Limberlost?', a: 'We welcome intimate gatherings, retreats, and small weddings. For groups of 10 or more, please contact us directly to discuss private buyout options and custom event planning.' },
+  { q: 'Can I host an event at Driftmoor?', a: 'We welcome intimate gatherings, retreats, and small weddings. For groups of 10 or more, please contact us directly to discuss private buyout options and custom event planning.' },
 ];
 
 export default function Contact() {
@@ -106,14 +106,14 @@ export default function Contact() {
               <div className="info-card">
                 <h3>Contact</h3>
                 <p><strong>Phone</strong><br />(312) 555-0192</p>
-                <p><strong>Email</strong><br />hello@limberlost.com</p>
+                <p><strong>Email</strong><br />hello@driftmoor.com</p>
               </div>
 
               <div className="info-card" id="directions">
                 <h3>Getting Here</h3>
-                <p>Limberlost is located in the rolling countryside of northern Illinois, approximately 90 minutes south of downtown Chicago.</p>
-                <p><strong>From Chicago</strong><br />Take I-55 South to Exit 217. Follow County Road 14 west for 8 miles. Limberlost entrance will be on your right.</p>
-                <p><strong>Address</strong><br />Limberlost Retreat<br />Rural Route 14<br />Illinois</p>
+                <p>Driftmoor is located in the rolling countryside of northern Illinois, approximately 90 minutes south of downtown Chicago.</p>
+                <p><strong>From Chicago</strong><br />Take I-55 South to Exit 217. Follow County Road 14 west for 8 miles. Driftmoor entrance will be on your right.</p>
+                <p><strong>Address</strong><br />Driftmoor Retreat<br />Rural Route 14<br />Illinois</p>
               </div>
 
               <div className="info-card">

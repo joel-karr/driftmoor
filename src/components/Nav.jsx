@@ -21,7 +21,7 @@ export default function Nav() {
   return (
     <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
       <div className="nav__inner">
-        <Link to="/" className="nav__logo" onClick={closeMenu}>Limberlost</Link>
+        <Link to="/" className="nav__logo" onClick={closeMenu}>Driftmoor</Link>
         <button
           className={`nav__toggle${menuOpen ? ' active' : ''}`}
           aria-label="Toggle navigation"

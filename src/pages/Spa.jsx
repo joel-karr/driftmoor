@@ -35,7 +35,7 @@ export default function Spa() {
             <Reveal>
               <span className="section__label">The Heart of the Spa</span>
               <h2 className="section__title">The Natural Rock Hot Tub</h2>
-              <p>The centerpiece of the Limberlost spa is our outdoor natural rock hot tub — a hand-built soaking pool set among mossy boulders, native ferns, and the canopy of hundred-year oaks. Fed by geothermally heated mineral water, it's a place to dissolve into the landscape.</p>
+              <p>The centerpiece of the Driftmoor spa is our outdoor natural rock hot tub — a hand-built soaking pool set among mossy boulders, native ferns, and the canopy of hundred-year oaks. Fed by geothermally heated mineral water, it's a place to dissolve into the landscape.</p>
               <p>Open from dawn until late evening, the hot tub is available to all cabin guests. At night, with no light pollution for miles, you'll soak beneath a sky dense with stars.</p>
             </Reveal>
           </div>
@@ -83,7 +83,7 @@ export default function Spa() {
             <Reveal>
               <span className="section__label">Wellness Activities</span>
               <h2 className="section__title">Beyond the Spa</h2>
-              <p>The Limberlost wellness experience extends beyond treatments. Join our guided morning yoga sessions on the meadow deck, take a meditative walk on our forest labyrinth trail, or simply find a hammock among the trees and let the afternoon drift.</p>
+              <p>The Driftmoor wellness experience extends beyond treatments. Join our guided morning yoga sessions on the meadow deck, take a meditative walk on our forest labyrinth trail, or simply find a hammock among the trees and let the afternoon drift.</p>
               <ul className="simple-list">
                 {activities.map((a) => <li key={a}>{a}</li>)}
               </ul>

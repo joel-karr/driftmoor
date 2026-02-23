@@ -10,7 +10,7 @@ export default function Home() {
         <div className="hero__overlay" />
         <div className="hero__content">
           <p className="hero__tagline fade-in">90 minutes from Chicago</p>
-          <h1 className="hero__title fade-in">Limberlost</h1>
+          <h1 className="hero__title fade-in">Driftmoor</h1>
           <p className="hero__subtitle fade-in">A luxury campground &amp; retreat in the Illinois countryside</p>
           <Link to="/contact" className="btn btn--primary fade-in">Book Your Stay</Link>
         </div>
@@ -26,7 +26,7 @@ export default function Home() {
             <Reveal>
               <span className="section__label">The Experience</span>
               <h2 className="section__title">Where Wilderness Meets Refinement</h2>
-              <p>Limberlost is not your ordinary campground. Set on 200 acres of rolling Illinois prairie and ancient oak groves, we've created a retreat where the beauty of the outdoors is matched by the comfort within. Every detail has been considered — from the hand-hewn timber of our cabins to the locally sourced ingredients on your plate.</p>
+              <p>Driftmoor is not your ordinary campground. Set on 200 acres of rolling Illinois prairie and ancient oak groves, we've created a retreat where the beauty of the outdoors is matched by the comfort within. Every detail has been considered — from the hand-hewn timber of our cabins to the locally sourced ingredients on your plate.</p>
               <p>Leave the city behind. Arrive to birdsong, crackling fires, and a cocktail made just for you.</p>
             </Reveal>
             <Reveal className="intro__image">
@@ -39,7 +39,7 @@ export default function Home() {
       <section className="features section section--dark">
         <div className="container">
           <span className="section__label section__label--center">What Awaits</span>
-          <h2 className="section__title section__title--center">Four Pillars of Limberlost</h2>
+          <h2 className="section__title section__title--center">Four Pillars of Driftmoor</h2>
           <div className="features__grid">
             <Link to="/cabins" className="feature-card reveal-inline">
               <Reveal>
@@ -101,7 +101,7 @@ export default function Home() {
 
       <section className="gallery section">
         <div className="container">
-          <span className="section__label section__label--center">Scenes from Limberlost</span>
+          <span className="section__label section__label--center">Scenes from Driftmoor</span>
           <h2 className="section__title section__title--center">A Place Apart</h2>
           <div className="gallery__grid">
             <Reveal className="gallery__item gallery__item--wide">
@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       <CTA
-        title="Escape to Limberlost"
+        title="Escape to Driftmoor"
         text="Just 90 minutes from downtown Chicago, a world away from everything else."
         buttonText="Reserve Your Cabin"
       />

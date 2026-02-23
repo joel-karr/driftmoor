@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <span className="footer__logo">Limberlost</span>
+          <span className="footer__logo">Driftmoor</span>
           <p className="footer__tagline">Luxury campground &amp; retreat<br />Illinois countryside</p>
         </div>
         <div className="footer__links">
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer__bottom">
-          <p>&copy; {new Date().getFullYear()} Limberlost. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Driftmoor. All rights reserved.</p>
         </div>
       </div>
     </footer>
