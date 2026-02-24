@@ -68,7 +68,7 @@ export default function Cocktails() {
         <div className="container">
           <div className="intro__grid intro__grid--reverse">
             <Reveal className="intro__image">
-              <img src="/images/outdoor-terrace.png" alt="Outdoor terrace with string lights at dusk" className="section-img section-img--tall" />
+              <ImagePlaceholder label="Outdoor terrace with string lights at dusk" tall src="https://images.unsplash.com/photo-1414604582943-2fd6305ad8b6?auto=format&fit=crop&w=1200&q=80" />
             </Reveal>
             <Reveal>
               <span className="section__label">Also Pouring</span>
