@@ -9,6 +9,7 @@ const cabins = [
     name: 'The Prairie',
     meta: 'Sleeps 2 · 480 sq ft · King bed',
     image: 'The Prairie cabin',
+    imageSrc: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80',
     desc: 'An intimate retreat for two. Floor-to-ceiling glass frames unbroken views of native tallgrass. Features a private deck with fire pit, outdoor shower, and soaking tub.',
     amenities: ['Wood-burning stove', 'Rainfall shower', 'Radiant floor heating', 'Private fire pit', 'Morning coffee pantry'],
   },
@@ -16,6 +17,7 @@ const cabins = [
     name: 'The Grove',
     meta: 'Sleeps 4 · 720 sq ft · King + bunks',
     image: 'The Grove cabin',
+    imageSrc: 'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80',
     desc: 'Nestled beneath a canopy of century-old oaks, The Grove is our family-friendly cabin. A generous living area, screened porch, and lofted bunks give everyone room to breathe.',
     amenities: ['Screened sleeping porch', 'Full kitchen', 'Lofted bunk room', 'Board games & books', 'Outdoor dining table'],
   },
@@ -23,6 +25,7 @@ const cabins = [
     name: 'The Ridgeline',
     meta: 'Sleeps 6 · 1,100 sq ft · 2 Kings + bunks',
     image: 'The Ridgeline cabin',
+    imageSrc: 'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&w=800&q=80',
     desc: 'Our largest cabin crowns a gentle rise with panoramic views in every direction. Two private bedrooms, a grand stone fireplace, and wraparound deck make this ideal for gatherings.',
     amenities: ['Stone fireplace', 'Wraparound deck', 'Full kitchen & dining', 'Two full bathrooms', 'Outdoor hot tub'],
   },
@@ -52,7 +55,7 @@ export default function Cabins() {
               <p>Modern comforts are woven seamlessly into the rustic framework: radiant floor heating, rainfall showers, premium bedding, and a fully stocked pantry for morning coffee at your own pace.</p>
             </Reveal>
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Cabin exterior at twilight" tall />
+              <ImagePlaceholder label="Cabin exterior at twilight" tall src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1200&q=80" />
             </Reveal>
           </div>
         </div>
@@ -66,7 +69,7 @@ export default function Cabins() {
             {cabins.map((cabin) => (
               <Reveal key={cabin.name} className="cabin-card">
                 <div className="cabin-card__image">
-                  <ImagePlaceholder label={cabin.image} />
+                  <ImagePlaceholder label={cabin.image} src={cabin.imageSrc} />
                 </div>
                 <div className="cabin-card__body">
                   <h3 className="cabin-card__name">{cabin.name}</h3>
