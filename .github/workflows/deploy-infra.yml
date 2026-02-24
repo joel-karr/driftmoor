@@ -28,8 +28,8 @@ env:
   AZURE_CLIENT_ID: 20656057-f6e9-4770-9dfa-1e28fa825fde
   AZURE_TENANT_ID: 8647bc78-3505-460c-96ff-833f8a71030a
   AZURE_SUBSCRIPTION_ID: 30872373-1289-477e-a87d-61c36e45ab17
-  AZURE_RESOURCE_GROUP_DEV: rg-limberlost-dev
-  AZURE_RESOURCE_GROUP_PROD: rg-limberlost-prod
+  AZURE_RESOURCE_GROUP_DEV: rg-driftmoor-dev
+  AZURE_RESOURCE_GROUP_PROD: rg-driftmoor-prod
 
 jobs:
   validate:
@@ -75,7 +75,7 @@ jobs:
           resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP_DEV }}
           template: infra/main.bicep
           parameters: infra/parameters/dev.bicepparam
-          deploymentName: limberlost-dev-${{ github.run_number }}
+          deploymentName: driftmoor-dev-${{ github.run_number }}
 
   deploy-prod:
     name: Deploy to Prod
@@ -99,4 +99,4 @@ jobs:
           resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP_PROD }}
           template: infra/main.bicep
           parameters: infra/parameters/prod.bicepparam
-          deploymentName: limberlost-prod-${{ github.run_number }}
+          deploymentName: driftmoor-prod-${{ github.run_number }}

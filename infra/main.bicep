@@ -8,7 +8,7 @@ param environment string
 param location string = resourceGroup().location
 
 @description('Base name for the project')
-param projectName string = 'limberlost'
+param projectName string = 'driftmoor'
 
 @allowed(['Free', 'Standard'])
 @description('SKU for the Static Web App')
