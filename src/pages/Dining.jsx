@@ -44,7 +44,7 @@ const menus = [
 export default function Dining() {
   return (
     <>
-      <PageHero label="Restaurant" title="The Table" subtitle="Farm-to-table dining rooted in the Illinois landscape" />
+      <PageHero label="Restaurant" title="The Table" subtitle="Farm-to-table dining rooted in the Illinois landscape" image="/images/farm-to-table-dinner.png" />
 
       <section className="section">
         <div className="container">

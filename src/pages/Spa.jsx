@@ -23,7 +23,7 @@ const activities = [
 export default function Spa() {
   return (
     <>
-      <PageHero label="Wellness" title="The Spa" subtitle="Outdoor wellness rituals among ancient oaks and open sky" />
+      <PageHero label="Wellness" title="The Spa" subtitle="Outdoor wellness rituals among ancient oaks and open sky" image="/images/treatment-pavilion.png" />
 
       <section className="section">
         <div className="container">

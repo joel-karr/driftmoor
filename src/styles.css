@@ -216,7 +216,9 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-charcoal) 60%, var(--color-bark) 100%);
+  background-color: var(--color-charcoal);
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -305,7 +307,9 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-charcoal) 100%);
+  background-color: var(--color-charcoal);
+  background-size: cover;
+  background-position: center;
 }
 
 .page-hero__overlay {

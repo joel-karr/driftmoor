@@ -5,7 +5,7 @@ import CTA from '../components/CTA';
 export default function Home() {
   return (
     <>
-      <header className="hero">
+      <header className="hero" style={{ backgroundImage: 'url(/images/morning-mist-meadow.png)' }}>
         <div className="hero__overlay" />
         <div className="hero__content">
           <p className="hero__tagline fade-in">90 minutes from Chicago</p>

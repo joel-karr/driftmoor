@@ -1,6 +1,9 @@
-export default function PageHero({ label, title, subtitle, className = '' }) {
+export default function PageHero({ label, title, subtitle, className = '', image }) {
   return (
-    <header className={`page-hero ${className}`}>
+    <header
+      className={`page-hero ${className}`}
+      style={image ? { backgroundImage: `url(${image})` } : undefined}
+    >
       <div className="page-hero__overlay" />
       <div className="page-hero__content">
         <span className="section__label">{label}</span>

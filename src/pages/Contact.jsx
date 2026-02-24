@@ -28,7 +28,7 @@ export default function Contact() {
 
   return (
     <>
-      <PageHero label="Visit" title="Reservations" subtitle="Begin planning your retreat to the Illinois countryside" />
+      <PageHero label="Visit" title="Reservations" subtitle="Begin planning your retreat to the Illinois countryside" image="/images/prairie-golden-hour.png" />
 
       <section className="section">
         <div className="container">

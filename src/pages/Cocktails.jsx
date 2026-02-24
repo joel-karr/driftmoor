@@ -29,7 +29,7 @@ const otherDrinks = [
 export default function Cocktails() {
   return (
     <>
-      <PageHero label="The Bar" title="The Hearth" subtitle="Craft cocktails, local spirits, and fireside conversation" />
+      <PageHero label="The Bar" title="The Hearth" subtitle="Craft cocktails, local spirits, and fireside conversation" image="/images/outdoor-terrace.png" />
 
       <section className="section">
         <div className="container">

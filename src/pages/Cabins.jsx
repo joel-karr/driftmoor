@@ -39,7 +39,7 @@ const standardAmenities = [
 export default function Cabins() {
   return (
     <>
-      <PageHero label="Accommodations" title="The Cabins" subtitle="Handcrafted shelters designed for deep rest and quiet wonder" />
+      <PageHero label="Accommodations" title="The Cabins" subtitle="Handcrafted shelters designed for deep rest and quiet wonder" image="/images/cabin-exterior-twilight.png" />
 
       <section className="section">
         <div className="container">
