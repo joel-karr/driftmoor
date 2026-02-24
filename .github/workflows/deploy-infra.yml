@@ -25,6 +25,7 @@ permissions:
   contents: read
 
 env:
+  AZURE_CLIENT_ID: 20656057-f6e9-4770-9dfa-1e28fa825fde
   AZURE_TENANT_ID: 8647bc78-3505-460c-96ff-833f8a71030a
   AZURE_SUBSCRIPTION_ID: 30872373-1289-477e-a87d-61c36e45ab17
   AZURE_RESOURCE_GROUP_DEV: rg-limberlost-dev
@@ -40,7 +41,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-id: ${{ env.AZURE_CLIENT_ID }}
           tenant-id: ${{ env.AZURE_TENANT_ID }}
           subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
 
@@ -64,7 +65,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-id: ${{ env.AZURE_CLIENT_ID }}
           tenant-id: ${{ env.AZURE_TENANT_ID }}
           subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
 
@@ -88,7 +89,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-id: ${{ env.AZURE_CLIENT_ID }}
           tenant-id: ${{ env.AZURE_TENANT_ID }}
           subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
 
