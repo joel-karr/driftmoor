@@ -28,8 +28,6 @@ env:
   AZURE_CLIENT_ID: 20656057-f6e9-4770-9dfa-1e28fa825fde
   AZURE_TENANT_ID: 8647bc78-3505-460c-96ff-833f8a71030a
   AZURE_SUBSCRIPTION_ID: 30872373-1289-477e-a87d-61c36e45ab17
-  AZURE_RESOURCE_GROUP_DEV: rg-driftmoor-dev
-  AZURE_RESOURCE_GROUP_PROD: rg-driftmoor-prod
 
 jobs:
   validate:
@@ -48,7 +46,8 @@ jobs:
       - name: Validate dev template
         uses: azure/arm-deploy@v2
         with:
-          resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP_DEV }}
+          scope: subscription
+          region: centralus
           template: infra/main.bicep
           parameters: infra/parameters/dev.bicepparam
           deploymentMode: Validate
@@ -72,7 +71,8 @@ jobs:
       - name: Deploy to dev
         uses: azure/arm-deploy@v2
         with:
-          resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP_DEV }}
+          scope: subscription
+          region: centralus
           template: infra/main.bicep
           parameters: infra/parameters/dev.bicepparam
           deploymentName: driftmoor-dev-${{ github.run_number }}
@@ -96,7 +96,8 @@ jobs:
       - name: Deploy to prod
         uses: azure/arm-deploy@v2
         with:
-          resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP_PROD }}
+          scope: subscription
+          region: centralus
           template: infra/main.bicep
           parameters: infra/parameters/prod.bicepparam
           deploymentName: driftmoor-prod-${{ github.run_number }}

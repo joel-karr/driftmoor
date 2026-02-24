@@ -1,11 +1,11 @@
-targetScope = 'resourceGroup'
+targetScope = 'subscription'
 
 @description('Environment name (dev, prod)')
 @allowed(['dev', 'prod'])
 param environment string
 
 @description('Location for all resources')
-param location string = resourceGroup().location
+param location string
 
 @description('Base name for the project')
 param projectName string = 'driftmoor'
@@ -14,22 +14,32 @@ param projectName string = 'driftmoor'
 @description('SKU for the Static Web App')
 param staticWebAppSku string = 'Free'
 
+var resourceGroupName = 'rg-${projectName}-${environment}'
+
 var tags = {
   project: projectName
   environment: environment
 }
 
-var staticWebAppName = '${projectName}-${environment}'
+resource rg 'Microsoft.Resources/resourceGroups@2024-03-01' = {
+  name: resourceGroupName
+  location: location
+  tags: tags
+}
 
 module staticWebApp 'modules/static-web-app.bicep' = {
   name: 'deploy-static-web-app'
+  scope: rg
   params: {
-    name: staticWebAppName
+    name: '${projectName}-${environment}'
     location: location
     skuName: staticWebAppSku
     tags: tags
   }
 }
+
+@description('The resource group name')
+output resourceGroupName string = rg.name
 
 @description('The default hostname of the Static Web App')
 output staticWebAppHostname string = staticWebApp.outputs.defaultHostname
