@@ -1,28 +1,27 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import Reveal from '../components/Reveal';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import CTA from '../components/CTA';
 
 const cabins = [
   {
     name: 'The Prairie',
     meta: 'Sleeps 2 · 480 sq ft · King bed',
-    image: 'The Prairie cabin',
+    image: '/images/cabin-prairie.png',
     desc: 'An intimate retreat for two. Floor-to-ceiling glass frames unbroken views of native tallgrass. Features a private deck with fire pit, outdoor shower, and soaking tub.',
     amenities: ['Wood-burning stove', 'Rainfall shower', 'Radiant floor heating', 'Private fire pit', 'Morning coffee pantry'],
   },
   {
     name: 'The Grove',
     meta: 'Sleeps 4 · 720 sq ft · King + bunks',
-    image: 'The Grove cabin',
+    image: '/images/cabin-grove.png',
     desc: 'Nestled beneath a canopy of century-old oaks, The Grove is our family-friendly cabin. A generous living area, screened porch, and lofted bunks give everyone room to breathe.',
     amenities: ['Screened sleeping porch', 'Full kitchen', 'Lofted bunk room', 'Board games & books', 'Outdoor dining table'],
   },
   {
     name: 'The Ridgeline',
     meta: 'Sleeps 6 · 1,100 sq ft · 2 Kings + bunks',
-    image: 'The Ridgeline cabin',
+    image: '/images/cabin-ridgeline.png',
     desc: 'Our largest cabin crowns a gentle rise with panoramic views in every direction. Two private bedrooms, a grand stone fireplace, and wraparound deck make this ideal for gatherings.',
     amenities: ['Stone fireplace', 'Wraparound deck', 'Full kitchen & dining', 'Two full bathrooms', 'Outdoor hot tub'],
   },
@@ -52,7 +51,7 @@ export default function Cabins() {
               <p>Modern comforts are woven seamlessly into the rustic framework: radiant floor heating, rainfall showers, premium bedding, and a fully stocked pantry for morning coffee at your own pace.</p>
             </Reveal>
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Cabin exterior at twilight" tall />
+              <img src="/images/cabin-exterior-twilight.png" alt="Cabin exterior at twilight" className="section-img section-img--tall" />
             </Reveal>
           </div>
         </div>
@@ -66,7 +65,7 @@ export default function Cabins() {
             {cabins.map((cabin) => (
               <Reveal key={cabin.name} className="cabin-card">
                 <div className="cabin-card__image">
-                  <ImagePlaceholder label={cabin.image} />
+                  <img src={cabin.image} alt={cabin.name} className="section-img" />
                 </div>
                 <div className="cabin-card__body">
                   <h3 className="cabin-card__name">{cabin.name}</h3>

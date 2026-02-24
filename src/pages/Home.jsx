@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import Reveal from '../components/Reveal';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import CTA from '../components/CTA';
 
 export default function Home() {
@@ -30,7 +29,7 @@ export default function Home() {
               <p>Leave the city behind. Arrive to birdsong, crackling fires, and a cocktail made just for you.</p>
             </Reveal>
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Prairie at golden hour" tall />
+              <img src="/images/prairie-golden-hour.png" alt="Prairie at golden hour" className="section-img section-img--tall" />
             </Reveal>
           </div>
         </div>
@@ -105,19 +104,19 @@ export default function Home() {
           <h2 className="section__title section__title--center">A Place Apart</h2>
           <div className="gallery__grid">
             <Reveal className="gallery__item gallery__item--wide">
-              <ImagePlaceholder label="Morning mist over the meadow" />
+              <img src="/images/morning-mist-meadow.png" alt="Morning mist over the meadow" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item">
-              <ImagePlaceholder label="Cabin interior at dusk" />
+              <img src="/images/cabin-interior-dusk.png" alt="Cabin interior at dusk" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item">
-              <ImagePlaceholder label="Natural rock hot tub" />
+              <img src="/images/natural-rock-hot-tub-home.png" alt="Natural rock hot tub" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item">
-              <ImagePlaceholder label="Fireside cocktails" />
+              <img src="/images/fireside-cocktails.png" alt="Fireside cocktails" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item gallery__item--wide">
-              <ImagePlaceholder label="Farm-to-table dinner service" />
+              <img src="/images/farm-to-table-dinner.png" alt="Farm-to-table dinner service" className="section-img" />
             </Reveal>
           </div>
         </div>
