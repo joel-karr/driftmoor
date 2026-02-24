@@ -7,8 +7,6 @@ const cabins = [
   {
     name: 'The Prairie',
     meta: 'Sleeps 2 · 480 sq ft · King bed',
-    image: 'The Prairie cabin',
-    imageSrc: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80',
     image: '/images/cabin-prairie.png',
     desc: 'An intimate retreat for two. Floor-to-ceiling glass frames unbroken views of native tallgrass. Features a private deck with fire pit, outdoor shower, and soaking tub.',
     amenities: ['Wood-burning stove', 'Rainfall shower', 'Radiant floor heating', 'Private fire pit', 'Morning coffee pantry'],
@@ -53,7 +51,7 @@ export default function Cabins() {
               <p>Modern comforts are woven seamlessly into the rustic framework: radiant floor heating, rainfall showers, premium bedding, and a fully stocked pantry for morning coffee at your own pace.</p>
             </Reveal>
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Cabin exterior at twilight" tall src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1200&q=80" />
+              <img src="/images/cabin-exterior-twilight.png" alt="Cabin exterior at twilight" className="section-img section-img--tall" />
             </Reveal>
           </div>
         </div>
@@ -67,7 +65,7 @@ export default function Cabins() {
             {cabins.map((cabin) => (
               <Reveal key={cabin.name} className="cabin-card">
                 <div className="cabin-card__image">
-                  <ImagePlaceholder label={cabin.image} src={cabin.imageSrc} />
+                  <img src={cabin.image} alt={cabin.name} className="section-img" />
                 </div>
                 <div className="cabin-card__body">
                   <h3 className="cabin-card__name">{cabin.name}</h3>

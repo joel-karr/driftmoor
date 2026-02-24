@@ -29,7 +29,7 @@ export default function Home() {
               <p>Leave the city behind. Arrive to birdsong, crackling fires, and a cocktail made just for you.</p>
             </Reveal>
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Prairie at golden hour" tall src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" />
+              <img src="/images/prairie-golden-hour.png" alt="Prairie at golden hour" className="section-img section-img--tall" />
             </Reveal>
           </div>
         </div>
@@ -104,19 +104,19 @@ export default function Home() {
           <h2 className="section__title section__title--center">A Place Apart</h2>
           <div className="gallery__grid">
             <Reveal className="gallery__item gallery__item--wide">
-              <ImagePlaceholder label="Morning mist over the meadow" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" />
+              <img src="/images/morning-mist-meadow.png" alt="Morning mist over the meadow" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item">
-              <ImagePlaceholder label="Cabin interior at dusk" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" />
+              <img src="/images/cabin-interior-dusk.png" alt="Cabin interior at dusk" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item">
-              <ImagePlaceholder label="Natural rock hot tub" src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?auto=format&fit=crop&w=800&q=80" />
+              <img src="/images/natural-rock-hot-tub-home.png" alt="Natural rock hot tub" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item">
-              <ImagePlaceholder label="Fireside cocktails" src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" />
+              <img src="/images/fireside-cocktails.png" alt="Fireside cocktails" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item gallery__item--wide">
-              <ImagePlaceholder label="Farm-to-table dinner service" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" />
+              <img src="/images/farm-to-table-dinner.png" alt="Farm-to-table dinner service" className="section-img" />
             </Reveal>
           </div>
         </div>
