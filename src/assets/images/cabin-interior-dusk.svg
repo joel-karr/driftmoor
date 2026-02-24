@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1612"/>
+      <stop offset="60%" stop-color="#3B2F20"/>
+      <stop offset="100%" stop-color="#5A3820"/>
+    </linearGradient>
+    <linearGradient id="warmlight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0C060"/>
+      <stop offset="100%" stop-color="#C4802A"/>
+    </linearGradient>
+    <radialGradient id="windowglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD080" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#C4802A" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#5A3820" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <!-- Sky/dusk background -->
+  <rect width="800" height="450" fill="url(#sky)"/>
+  <!-- Stars -->
+  <g fill="#FDFBF7" opacity="0.5">
+    <circle cx="50" cy="40" r="1"/><circle cx="120" cy="25" r="1.2"/>
+    <circle cx="200" cy="55" r="0.8"/><circle cx="680" cy="35" r="1"/>
+    <circle cx="750" cy="60" r="1.2"/><circle cx="720" cy="20" r="0.8"/>
+  </g>
+  <!-- Tree silhouettes -->
+  <path d="M0,300 L30,180 L60,300Z" fill="#2A3020" opacity="0.8"/>
+  <path d="M45,310 L70,200 L95,310Z" fill="#1A2010" opacity="0.8"/>
+  <path d="M700,290 L730,170 L760,290Z" fill="#2A3020" opacity="0.8"/>
+  <path d="M748,305 L772,195 L796,305Z" fill="#1A2010" opacity="0.8"/>
+  <!-- Cabin structure -->
+  <!-- Main body -->
+  <rect x="180" y="230" width="440" height="200" fill="#3B2F20"/>
+  <!-- Cabin roof -->
+  <polygon points="140,230 400,90 660,230" fill="#2A1F15"/>
+  <!-- Chimney -->
+  <rect x="500" y="105" width="40" height="100" fill="#2A1F15"/>
+  <!-- Window glow halo -->
+  <ellipse cx="310" cy="310" rx="90" ry="70" fill="url(#windowglow)" filter="url(#glow)"/>
+  <ellipse cx="490" cy="310" rx="90" ry="70" fill="url(#windowglow)" filter="url(#glow)"/>
+  <!-- Windows warm lit -->
+  <rect x="250" y="270" width="120" height="90" rx="4" fill="url(#warmlight)" opacity="0.95"/>
+  <rect x="430" y="270" width="120" height="90" rx="4" fill="url(#warmlight)" opacity="0.9"/>
+  <!-- Window panes -->
+  <line x1="310" y1="270" x2="310" y2="360" stroke="#2A1F15" stroke-width="3"/>
+  <line x1="250" y1="315" x2="370" y2="315" stroke="#2A1F15" stroke-width="3"/>
+  <line x1="490" y1="270" x2="490" y2="360" stroke="#2A1F15" stroke-width="3"/>
+  <line x1="430" y1="315" x2="550" y2="315" stroke="#2A1F15" stroke-width="3"/>
+  <!-- Door -->
+  <rect x="355" y="340" width="90" height="90" rx="3" fill="#2A1F15"/>
+  <rect x="360" y="345" width="38" height="80" rx="2" fill="#3B2F20"/>
+  <rect x="402" y="345" width="38" height="80" rx="2" fill="#3B2F20"/>
+  <!-- Door knob -->
+  <circle cx="396" cy="390" r="4" fill="#C4A26E"/>
+  <!-- Smoke from chimney -->
+  <path d="M520,105 Q515,80 525,60 Q530,45 520,30" stroke="#888" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M510,100 Q505,78 518,55 Q524,40 515,25" stroke="#888" stroke-width="2" fill="none" opacity="0.3"/>
+  <!-- Porch light glow -->
+  <circle cx="400" cy="345" r="5" fill="#FFE080"/>
+  <ellipse cx="400" cy="355" rx="30" ry="15" fill="#FFD060" opacity="0.25" filter="url(#glow)"/>
+  <!-- Foreground snow/ground -->
+  <path d="M0,430 Q200,415 400,420 Q600,415 800,428 L800,450 L0,450Z" fill="#5C6B50" opacity="0.6"/>
+  <!-- Fire glow in window -->
+  <ellipse cx="310" cy="340" rx="20" ry="15" fill="#FF8020" opacity="0.35"/>
+</svg>

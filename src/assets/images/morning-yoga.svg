@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A6080"/>
+      <stop offset="35%" stop-color="#7890A8"/>
+      <stop offset="60%" stop-color="#C8A870"/>
+      <stop offset="80%" stop-color="#E8C080"/>
+      <stop offset="100%" stop-color="#F0D090"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="75%" r="30%">
+      <stop offset="0%" stop-color="#FFE8A0" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#F0B040" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#C8A870" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mist"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <!-- Morning sky -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <!-- Sun glow -->
+  <ellipse cx="400" cy="450" rx="250" ry="130" fill="url(#sun)"/>
+  <!-- Sun -->
+  <circle cx="400" cy="452" r="26" fill="#FFE890" opacity="0.92"/>
+  <!-- Distant mist -->
+  <ellipse cx="400" cy="370" rx="500" ry="80" fill="#D8EAF0" opacity="0.5" filter="url(#mist)"/>
+  <!-- Tree line -->
+  <path d="M0,330 Q80,305 160,318 Q240,300 320,312 Q400,300 480,312 Q560,300 640,312 Q720,300 800,310 L800,370 L0,370Z"
+        fill="#3A4A3A" opacity="0.6"/>
+  <!-- Meadow ground -->
+  <rect x="0" y="420" width="800" height="180" fill="#5C6B50"/>
+  <!-- Deck platform -->
+  <rect x="150" y="400" width="500" height="30" rx="4" fill="#3B2F20"/>
+  <!-- Deck planks -->
+  <g stroke="#2A2015" stroke-width="1.5" opacity="0.4">
+    <line x1="150" y1="408" x2="650" y2="408"/>
+    <line x1="150" y1="417" x2="650" y2="417"/>
+    <line x1="150" y1="426" x2="650" y2="426"/>
+  </g>
+  <!-- Yoga mat -->
+  <rect x="340" y="375" width="120" height="32" rx="5" fill="#8090A0" opacity="0.85"/>
+  <!-- Yoga person (tree pose / warrior pose silhouette) -->
+  <!-- Standing leg -->
+  <line x1="400" y1="375" x2="400" y2="300" stroke="#2A1F15" stroke-width="8" stroke-linecap="round" opacity="0.75"/>
+  <!-- Raised leg -->
+  <line x1="400" y1="340" x2="430" y2="310" stroke="#2A1F15" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+  <!-- Torso -->
+  <line x1="400" y1="300" x2="400" y2="245" stroke="#2A1F15" stroke-width="8" stroke-linecap="round" opacity="0.75"/>
+  <!-- Left arm raised -->
+  <line x1="400" y1="270" x2="365" y2="230" stroke="#2A1F15" stroke-width="6" stroke-linecap="round" opacity="0.75"/>
+  <!-- Right arm raised -->
+  <line x1="400" y1="270" x2="435" y2="230" stroke="#2A1F15" stroke-width="6" stroke-linecap="round" opacity="0.75"/>
+  <!-- Head -->
+  <circle cx="400" cy="235" r="16" fill="#2A1F15" opacity="0.75"/>
+  <!-- Second person in background (child pose) -->
+  <g opacity="0.45" transform="translate(520,380)">
+    <ellipse cx="0" cy="-15" rx="40" ry="12" fill="#2A1F15"/>
+    <circle cx="40" cy="-12" r="9" fill="#2A1F15"/>
+  </g>
+  <!-- Third person in background (standing) -->
+  <g opacity="0.4" transform="translate(260,380)">
+    <line x1="0" y1="0" x2="0" y2="-80" stroke="#2A1F15" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="0" cy="-90" r="10" fill="#2A1F15"/>
+    <line x1="0" y1="-60" x2="-25" y2="-40" stroke="#2A1F15" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="-60" x2="25" y2="-40" stroke="#2A1F15" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-15" y2="30" stroke="#2A1F15" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="15" y2="30" stroke="#2A1F15" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- Grass texture in foreground -->
+  <g stroke="#4A5A3A" stroke-width="1.5" fill="none" opacity="0.5">
+    <path d="M50,420 Q52,405 48,392"/><path d="M58,420 Q60,408 64,395"/>
+    <path d="M160,418 Q162,403 158,390"/><path d="M168,418 Q170,406 174,393"/>
+    <path d="M680,418 Q682,403 678,390"/><path d="M688,418 Q690,406 694,393"/>
+    <path d="M750,416 Q752,401 748,388"/><path d="M758,416 Q760,404 764,391"/>
+  </g>
+  <!-- Morning mist on ground -->
+  <ellipse cx="400" cy="425" rx="400" ry="30" fill="#D8EAF0" opacity="0.2" filter="url(#mist)"/>
+</svg>

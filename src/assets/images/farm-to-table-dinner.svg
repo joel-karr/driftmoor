@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A2218"/>
+      <stop offset="100%" stop-color="#1A1510"/>
+    </linearGradient>
+    <radialGradient id="candlelight" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#C4802A" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1A1510" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <!-- Room background -->
+  <rect width="800" height="450" fill="url(#room)"/>
+  <!-- Windows with night sky -->
+  <rect x="50" y="30" width="160" height="220" rx="4" fill="#0D1020" opacity="0.8"/>
+  <rect x="590" y="30" width="160" height="220" rx="4" fill="#0D1020" opacity="0.8"/>
+  <!-- Window panes -->
+  <line x1="130" y1="30" x2="130" y2="250" stroke="#3B2F20" stroke-width="4"/>
+  <line x1="50" y1="140" x2="210" y2="140" stroke="#3B2F20" stroke-width="4"/>
+  <line x1="670" y1="30" x2="670" y2="250" stroke="#3B2F20" stroke-width="4"/>
+  <line x1="590" y1="140" x2="750" y2="140" stroke="#3B2F20" stroke-width="4"/>
+  <!-- Stars in windows -->
+  <g fill="#FDFBF7" opacity="0.6">
+    <circle cx="80" cy="60" r="1"/><circle cx="170" cy="80" r="1.2"/>
+    <circle cx="100" cy="180" r="0.8"/><circle cx="150" cy="210" r="1"/>
+    <circle cx="620" cy="55" r="1.2"/><circle cx="720" cy="75" r="1"/>
+    <circle cx="640" cy="175" r="0.8"/><circle cx="700" cy="200" r="1"/>
+  </g>
+  <!-- Table surface -->
+  <path d="M100,320 Q400,295 700,320 L720,450 L80,450Z" fill="#3B2F20"/>
+  <!-- Tablecloth -->
+  <path d="M120,315 Q400,292 680,315 L700,445 L100,445Z" fill="#F5F0E8" opacity="0.9"/>
+  <!-- Candle centerpiece -->
+  <rect x="387" y="230" width="10" height="50" rx="2" fill="#F5F0E8"/>
+  <ellipse cx="392" cy="230" rx="7" ry="3" fill="#F5F0E8"/>
+  <!-- Flame -->
+  <path d="M392,225 Q388,210 392,195 Q396,210 392,225Z" fill="#FF9020"/>
+  <path d="M392,220 Q389,210 392,200 Q395,210 392,220Z" fill="#FFE060" opacity="0.9"/>
+  <!-- Candle glow -->
+  <ellipse cx="392" cy="280" rx="120" ry="80" fill="url(#candlelight)"/>
+  <!-- Plates -->
+  <ellipse cx="240" cy="380" rx="75" ry="20" fill="#FDFBF7"/>
+  <ellipse cx="240" cy="378" rx="60" ry="16" fill="#F5F0E8"/>
+  <!-- Food on plate 1 -->
+  <ellipse cx="240" cy="377" rx="35" ry="10" fill="#8B6040" opacity="0.9"/>
+  <circle cx="230" cy="375" r="8" fill="#5C6B50" opacity="0.8"/>
+  <circle cx="250" cy="374" r="6" fill="#A04030" opacity="0.9"/>
+  <!-- Plate 2 -->
+  <ellipse cx="560" cy="380" rx="75" ry="20" fill="#FDFBF7"/>
+  <ellipse cx="560" cy="378" rx="60" ry="16" fill="#F5F0E8"/>
+  <ellipse cx="560" cy="377" rx="35" ry="10" fill="#806050" opacity="0.9"/>
+  <circle cx="548" cy="375" r="7" fill="#608050" opacity="0.8"/>
+  <circle cx="570" cy="374" r="5" fill="#C08040" opacity="0.9"/>
+  <!-- Wine glasses -->
+  <g transform="translate(165,310)">
+    <polygon points="-12,0 12,0 6,40 -6,40" fill="#C8E0F0" opacity="0.5"/>
+    <line x1="0" y1="40" x2="0" y2="60" stroke="#C0D8E8" stroke-width="2.5" opacity="0.7"/>
+    <ellipse cx="0" cy="60" rx="12" ry="3" fill="#C0D8E8" opacity="0.5"/>
+    <path d="M-10,8 L10,8 L6,36 L-6,36Z" fill="#8B2020" opacity="0.7"/>
+  </g>
+  <g transform="translate(640,310)">
+    <polygon points="-12,0 12,0 6,40 -6,40" fill="#C8E0F0" opacity="0.5"/>
+    <line x1="0" y1="40" x2="0" y2="60" stroke="#C0D8E8" stroke-width="2.5" opacity="0.7"/>
+    <ellipse cx="0" cy="60" rx="12" ry="3" fill="#C0D8E8" opacity="0.5"/>
+    <path d="M-10,8 L10,8 L6,36 L-6,36Z" fill="#8B2020" opacity="0.7"/>
+  </g>
+  <!-- Forks and knives -->
+  <line x1="305" y1="355" x2="305" y2="420" stroke="#C0C0B0" stroke-width="2.5" opacity="0.7"/>
+  <line x1="318" y1="355" x2="318" y2="420" stroke="#C0C0B0" stroke-width="2" opacity="0.7"/>
+  <line x1="175" y1="355" x2="175" y2="420" stroke="#C0C0B0" stroke-width="2.5" opacity="0.7"/>
+  <line x1="484" y1="355" x2="484" y2="420" stroke="#C0C0B0" stroke-width="2" opacity="0.7"/>
+  <!-- Timber ceiling beams -->
+  <rect x="0" y="0" width="800" height="25" fill="#2A1F15"/>
+  <rect x="100" y="0" width="30" height="100" rx="6" fill="#3B2F20" opacity="0.7"/>
+  <rect x="370" y="0" width="30" height="80" rx="6" fill="#3B2F20" opacity="0.7"/>
+  <rect x="640" y="0" width="30" height="100" rx="6" fill="#3B2F20" opacity="0.7"/>
+  <!-- Hanging Edison bulbs -->
+  <line x1="200" y1="0" x2="200" y2="160" stroke="#C4A26E" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="200" cy="165" rx="12" ry="16" fill="#FFE080" opacity="0.8"/>
+  <ellipse cx="200" cy="165" rx="18" ry="22" fill="#FFD060" opacity="0.2" filter="url(#glow)"/>
+  <line x1="600" y1="0" x2="600" y2="155" stroke="#C4A26E" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="600" cy="160" rx="12" ry="16" fill="#FFE080" opacity="0.8"/>
+  <ellipse cx="600" cy="160" rx="18" ry="22" fill="#FFD060" opacity="0.2" filter="url(#glow)"/>
+</svg>

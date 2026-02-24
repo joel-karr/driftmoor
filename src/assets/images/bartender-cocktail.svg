@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1410"/>
+      <stop offset="100%" stop-color="#100D0A"/>
+    </linearGradient>
+    <radialGradient id="bartoplight" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#C4802A" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#100D0A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glassglow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#80B0D0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#80B0D0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="softglow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- Bar back wall with shelves -->
+  <rect x="0" y="0" width="800" height="600" fill="#201810" opacity="0.8"/>
+  <!-- Stone fireplace right side -->
+  <rect x="580" y="80" width="220" height="400" fill="#252020"/>
+  <rect x="600" y="120" width="180" height="280" fill="#0D0B08"/>
+  <!-- Fire in fireplace -->
+  <g opacity="0.85">
+    <path d="M660,390 Q648,360 660,330 Q670,308 690,290 Q702,310 706,335 Q712,360 698,388 Q690,365 690,352 Q680,368 660,390Z" fill="#FF5008"/>
+    <path d="M673,383 Q663,358 672,333 Q680,314 688,305 Q695,320 698,342 Q704,368 692,382 Q685,360 690,350 Q681,366 673,383Z" fill="#FF7020"/>
+    <path d="M681,376 Q673,355 680,333 Q686,316 690,308 Q697,324 700,345 Q705,368 694,378 Q688,357 690,348 Q682,363 681,376Z" fill="#FFA030"/>
+  </g>
+  <!-- Bottle shelves -->
+  <rect x="0" y="80" width="520" height="12" rx="2" fill="#3B2F20"/>
+  <rect x="0" y="170" width="520" height="12" rx="2" fill="#3B2F20"/>
+  <rect x="0" y="260" width="520" height="12" rx="2" fill="#3B2F20"/>
+  <!-- Bottles on shelves -->
+  <g opacity="0.85">
+    <!-- Row 1 -->
+    <rect x="20" y="40" width="22" height="42" rx="5" fill="#2A4060"/>
+    <rect x="50" y="38" width="18" height="44" rx="4" fill="#A06030"/>
+    <rect x="76" y="42" width="20" height="40" rx="5" fill="#205030"/>
+    <rect x="104" y="36" width="24" height="46" rx="5" fill="#602020"/>
+    <rect x="136" y="40" width="20" height="42" rx="5" fill="#C4A26E" opacity="0.7"/>
+    <rect x="164" y="38" width="22" height="44" rx="5" fill="#304050"/>
+    <rect x="194" y="42" width="18" height="40" rx="4" fill="#402010"/>
+    <rect x="220" y="38" width="20" height="44" rx="5" fill="#205030"/>
+    <rect x="248" y="40" width="22" height="42" rx="5" fill="#A06030"/>
+    <rect x="278" y="36" width="20" height="46" rx="4" fill="#2A4060"/>
+    <rect x="306" y="40" width="22" height="42" rx="5" fill="#602020"/>
+    <rect x="336" y="38" width="18" height="44" rx="4" fill="#304050"/>
+    <rect x="362" y="42" width="20" height="40" rx="5" fill="#C4A26E" opacity="0.6"/>
+    <rect x="390" y="38" width="22" height="44" rx="5" fill="#205030"/>
+    <rect x="420" y="40" width="20" height="42" rx="4" fill="#A06030"/>
+    <rect x="448" y="36" width="22" height="46" rx="5" fill="#402010"/>
+    <rect x="478" y="40" width="20" height="42" rx="5" fill="#2A4060"/>
+    <!-- Row 2 -->
+    <rect x="20" y="128" width="22" height="44" rx="5" fill="#A06030"/>
+    <rect x="50" y="126" width="18" height="46" rx="4" fill="#2A4060"/>
+    <rect x="76" y="130" width="20" height="42" rx="5" fill="#602020"/>
+    <rect x="104" y="124" width="24" height="48" rx="5" fill="#205030"/>
+    <rect x="136" y="128" width="20" height="44" rx="5" fill="#304050"/>
+    <rect x="164" y="126" width="22" height="46" rx="5" fill="#A06030"/>
+    <rect x="194" y="130" width="18" height="42" rx="4" fill="#C4A26E" opacity="0.6"/>
+    <rect x="220" y="126" width="20" height="46" rx="5" fill="#402010"/>
+    <rect x="248" y="128" width="22" height="44" rx="5" fill="#205030"/>
+    <rect x="278" y="124" width="20" height="48" rx="4" fill="#2A4060"/>
+    <rect x="306" y="128" width="22" height="44" rx="5" fill="#A06030"/>
+    <rect x="336" y="126" width="18" height="46" rx="4" fill="#602020"/>
+    <rect x="362" y="130" width="20" height="42" rx="5" fill="#304050"/>
+    <rect x="390" y="126" width="22" height="46" rx="5" fill="#205030"/>
+    <rect x="420" y="128" width="20" height="44" rx="4" fill="#C4A26E" opacity="0.55"/>
+    <rect x="448" y="124" width="22" height="48" rx="5" fill="#A06030"/>
+    <rect x="478" y="128" width="20" height="44" rx="5" fill="#402010"/>
+  </g>
+  <!-- Bar counter -->
+  <rect x="0" y="390" width="800" height="30" rx="4" fill="#2A2015"/>
+  <rect x="0" y="380" width="800" height="12" rx="3" fill="#3B2F20"/>
+  <!-- Bar counter top light -->
+  <rect x="0" y="380" width="800" height="210" fill="url(#bartoplight)"/>
+  <!-- Bar surface -->
+  <rect x="0" y="418" width="800" height="182" fill="#2A2015"/>
+  <!-- Bartender silhouette (center) -->
+  <g opacity="0.7">
+    <!-- Head -->
+    <circle cx="380" cy="310" r="28" fill="#2A1F15"/>
+    <!-- Torso -->
+    <rect x="340" y="338" width="80" height="50" rx="8" fill="#2A1F15"/>
+    <!-- Arms working at bar -->
+    <line x1="340" y1="355" x2="280" y2="395" stroke="#2A1F15" stroke-width="18" stroke-linecap="round"/>
+    <line x1="420" y1="350" x2="480" y2="395" stroke="#2A1F15" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <!-- Cocktail glass being made -->
+  <g transform="translate(480,370)">
+    <polygon points="-22,0 22,0 10,52 -10,52" fill="#B0C8E0" opacity="0.55"/>
+    <line x1="0" y1="52" x2="0" y2="78" stroke="#C0D8F0" stroke-width="3" opacity="0.7"/>
+    <ellipse cx="0" cy="78" rx="18" ry="5" fill="#C0D8F0" opacity="0.5"/>
+    <ellipse cx="0" cy="-2" rx="22" ry="5" fill="#D0E8FF" opacity="0.4"/>
+    <path d="M-16,10 L16,10 L10,48 L-10,48Z" fill="#8B4020" opacity="0.7"/>
+    <ellipse cx="0" cy="8" rx="22" ry="5" fill="#D0E8FF" opacity="0.15"/>
+  </g>
+  <!-- Shaker -->
+  <g transform="translate(280,355)" opacity="0.75">
+    <rect x="-12" y="0" width="24" height="50" rx="6" fill="#B0B0B0"/>
+    <rect x="-10" y="-8" width="20" height="12" rx="4" fill="#C8C8C8"/>
+    <ellipse cx="0" cy="0" rx="12" ry="4" fill="#A0A0A0"/>
+  </g>
+  <!-- Citrus slice on bar -->
+  <circle cx="560" cy="388" r="15" fill="#F0A830" opacity="0.8"/>
+  <path d="M560,373 L560,403 M545,388 L575,388" stroke="#F5D090" stroke-width="1.5" opacity="0.7"/>
+  <!-- Ice bucket -->
+  <rect x="620" y="365" width="50" height="42" rx="5" fill="#808080" opacity="0.6"/>
+  <ellipse cx="645" cy="365" rx="25" ry="8" fill="#909090" opacity="0.7"/>
+  <!-- Pendant light over bar -->
+  <line x1="400" y1="0" x2="400" y2="200" stroke="#C4A26E" stroke-width="2" opacity="0.6"/>
+  <ellipse cx="400" cy="205" rx="22" ry="28" fill="#C4A26E" opacity="0.8"/>
+  <ellipse cx="400" cy="200" rx="15" ry="10" fill="#FFE080" opacity="0.7" filter="url(#glow)"/>
+  <ellipse cx="400" cy="215" rx="50" ry="30" fill="#FFD060" opacity="0.15" filter="url(#glow)"/>
+</svg>

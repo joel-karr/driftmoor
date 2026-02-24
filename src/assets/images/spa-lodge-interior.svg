@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A2018"/>
+      <stop offset="100%" stop-color="#1A1510"/>
+    </linearGradient>
+    <radialGradient id="fireglow" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#C04010" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1A1510" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="softglow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <!-- Room -->
+  <rect width="800" height="450" fill="url(#room)"/>
+  <!-- Back wall -->
+  <rect x="0" y="0" width="800" height="450" fill="#251E16" opacity="0.8"/>
+  <!-- Timber ceiling -->
+  <rect x="0" y="0" width="800" height="30" fill="#2A2015"/>
+  <rect x="80" y="0" width="25" height="130" rx="5" fill="#3B2F20" opacity="0.8"/>
+  <rect x="380" y="0" width="25" height="110" rx="5" fill="#3B2F20" opacity="0.8"/>
+  <rect x="680" y="0" width="25" height="130" rx="5" fill="#3B2F20" opacity="0.8"/>
+  <!-- Cross beams -->
+  <rect x="0" y="25" width="800" height="12" rx="3" fill="#3B2F20" opacity="0.6"/>
+  <!-- Stone fireplace -->
+  <rect x="310" y="220" width="180" height="230" fill="#2A2520"/>
+  <rect x="305" y="215" width="190" height="20" rx="3" fill="#3B3530"/>
+  <!-- Fireplace opening -->
+  <rect x="345" y="260" width="110" height="120" rx="5" fill="#0D0B08"/>
+  <!-- Fire -->
+  <g opacity="0.9">
+    <path d="M380,370 Q368,340 378,310 Q388,290 400,275 Q412,292 418,315 Q425,340 410,368 Q402,348 400,336 Q393,352 380,370Z" fill="#FF5008"/>
+    <path d="M390,365 Q380,342 388,318 Q396,300 403,290 Q410,305 415,325 Q422,350 410,365 Q403,345 400,337 Q394,352 390,365Z" fill="#FF7020"/>
+    <path d="M396,360 Q388,342 395,320 Q400,308 407,300 Q413,315 416,336 Q420,358 410,363 Q404,342 400,337 Q395,352 396,360Z" fill="#FFA030"/>
+    <path d="M399,355 Q393,338 400,318 Q408,338 401,355Z" fill="#FFD060" opacity="0.8"/>
+  </g>
+  <!-- Fire glow on room -->
+  <ellipse cx="400" cy="320" rx="250" ry="200" fill="url(#fireglow)"/>
+  <!-- Fireplace mantle -->
+  <rect x="290" y="210" width="220" height="18" rx="3" fill="#3B2F20"/>
+  <!-- Items on mantle -->
+  <rect x="310" y="195" width="6" height="20" rx="1" fill="#F5F0E8" opacity="0.7"/>
+  <ellipse cx="313" cy="195" rx="4" ry="3" fill="#F5F0E8" opacity="0.5"/>
+  <rect x="478" y="192" width="6" height="22" rx="1" fill="#F5F0E8" opacity="0.7"/>
+  <ellipse cx="481" cy="192" rx="4" ry="3" fill="#F5F0E8" opacity="0.5"/>
+  <!-- Armchairs silhouettes -->
+  <!-- Left chair -->
+  <rect x="80" y="320" width="130" height="120" rx="10" fill="#3B2F20"/>
+  <rect x="70" y="285" width="145" height="50" rx="8" fill="#453525"/>
+  <rect x="65" y="310" width="20" height="120" rx="5" fill="#453525"/>
+  <rect x="195" y="310" width="20" height="120" rx="5" fill="#453525"/>
+  <!-- Right chair -->
+  <rect x="590" y="320" width="130" height="120" rx="10" fill="#3B2F20"/>
+  <rect x="585" y="285" width="145" height="50" rx="8" fill="#453525"/>
+  <rect x="580" y="310" width="20" height="120" rx="5" fill="#453525"/>
+  <rect x="710" y="310" width="20" height="120" rx="5" fill="#453525"/>
+  <!-- Small table between chairs -->
+  <rect x="355" y="385" width="90" height="55" rx="5" fill="#2A2015"/>
+  <!-- Tea/cup on table -->
+  <ellipse cx="400" cy="383" rx="20" ry="8" fill="#3B2F20"/>
+  <rect x="382" y="368" width="36" height="18" rx="3" fill="#C4A26E" opacity="0.8"/>
+  <!-- Wall sconces -->
+  <g fill="#C4A26E" opacity="0.8">
+    <rect x="148" y="145" width="8" height="20" rx="2"/>
+    <ellipse cx="152" cy="144" rx="12" ry="6" fill="#C4A26E"/>
+    <ellipse cx="152" cy="142" rx="8" ry="4" fill="#FFE080" opacity="0.7" filter="url(#glow)"/>
+    <rect x="640" y="145" width="8" height="20" rx="2"/>
+    <ellipse cx="644" cy="144" rx="12" ry="6" fill="#C4A26E"/>
+    <ellipse cx="644" cy="142" rx="8" ry="4" fill="#FFE080" opacity="0.7" filter="url(#glow)"/>
+  </g>
+  <!-- Plush rug -->
+  <ellipse cx="400" cy="420" rx="220" ry="30" fill="#5C6B50" opacity="0.3"/>
+  <!-- Plant in corner -->
+  <rect x="30" y="360" width="15" height="50" rx="3" fill="#2A2015"/>
+  <ellipse cx="37" cy="360" rx="30" ry="50" fill="#2A4020" opacity="0.8"/>
+  <rect x="755" y="360" width="15" height="50" rx="3" fill="#2A2015"/>
+  <ellipse cx="762" cy="360" rx="30" ry="50" fill="#2A4020" opacity="0.8"/>
+</svg>
