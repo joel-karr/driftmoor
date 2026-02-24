@@ -25,6 +25,7 @@ permissions:
   contents: read
 
 env:
+  AZURE_SUBSCRIPTION_ID: 30872373-1289-477e-a87d-61c36e45ab17
   AZURE_RESOURCE_GROUP_DEV: rg-limberlost-dev
   AZURE_RESOURCE_GROUP_PROD: rg-limberlost-prod
 
@@ -40,7 +41,7 @@ jobs:
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
 
       - name: Validate dev template
         uses: azure/arm-deploy@v2
@@ -64,7 +65,7 @@ jobs:
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy to dev
         uses: azure/arm-deploy@v2
@@ -88,7 +89,7 @@ jobs:
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy to prod
         uses: azure/arm-deploy@v2
