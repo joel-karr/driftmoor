@@ -1,6 +1,5 @@
 import PageHero from '../components/PageHero';
 import Reveal from '../components/Reveal';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import CTA from '../components/CTA';
 
 const menus = [
@@ -51,7 +50,7 @@ export default function Dining() {
         <div className="container">
           <div className="intro__grid intro__grid--reverse">
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Chef plating seasonal dish" tall />
+              <img src="/images/chef-plating.png" alt="Chef plating seasonal dish" className="section-img section-img--tall" />
             </Reveal>
             <Reveal>
               <span className="section__label">Our Kitchen</span>
@@ -95,7 +94,7 @@ export default function Dining() {
               <p>Wake to a basket delivered quietly to your cabin door: fresh pastries from our kitchen, seasonal fruit, house-made granola, and a thermos of locally roasted coffee. Or join us at the main lodge for a full breakfast service — eggs from our own hens, thick-cut bacon, and sourdough pancakes with maple syrup.</p>
             </Reveal>
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Breakfast basket on cabin porch" tall />
+              <img src="/images/breakfast-basket.png" alt="Breakfast basket on cabin porch" className="section-img section-img--tall" />
             </Reveal>
           </div>
         </div>

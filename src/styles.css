@@ -397,7 +397,19 @@ h1, h2, h3, h4 {
 
 .section--dark .intro__text p { color: var(--color-sand); }
 
-/* --- Image Placeholders --- */
+/* --- Section Images (replaces ImagePlaceholder) --- */
+.section-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+  min-height: 300px;
+}
+
+.section-img--tall { min-height: 450px; }
+
+/* --- Image Placeholders (kept for backward compat, can be removed later) --- */
 .image-placeholder {
   background: linear-gradient(135deg, var(--color-forest), var(--color-bark));
   border-radius: 2px;
@@ -481,7 +493,8 @@ h1, h2, h3, h4 {
 
 .gallery__item--wide { grid-column: span 2; }
 
-.gallery__item .image-placeholder {
+.gallery__item .image-placeholder,
+.gallery__item .section-img {
   min-height: 250px;
   height: 100%;
 }
@@ -505,7 +518,8 @@ h1, h2, h3, h4 {
 .cabin-card:nth-child(even) { direction: rtl; }
 .cabin-card:nth-child(even) > * { direction: ltr; }
 
-.cabin-card__image .image-placeholder {
+.cabin-card__image .image-placeholder,
+.cabin-card__image .section-img {
   min-height: 100%;
   border-radius: 0;
 }
