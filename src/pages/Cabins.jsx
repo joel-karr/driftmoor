@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import Reveal from '../components/Reveal';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import CTA from '../components/CTA';
 
 const cabins = [
@@ -10,22 +9,21 @@ const cabins = [
     meta: 'Sleeps 2 · 480 sq ft · King bed',
     image: 'The Prairie cabin',
     imageSrc: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80',
+    image: '/images/cabin-prairie.png',
     desc: 'An intimate retreat for two. Floor-to-ceiling glass frames unbroken views of native tallgrass. Features a private deck with fire pit, outdoor shower, and soaking tub.',
     amenities: ['Wood-burning stove', 'Rainfall shower', 'Radiant floor heating', 'Private fire pit', 'Morning coffee pantry'],
   },
   {
     name: 'The Grove',
     meta: 'Sleeps 4 · 720 sq ft · King + bunks',
-    image: 'The Grove cabin',
-    imageSrc: 'https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80',
+    image: '/images/cabin-grove.png',
     desc: 'Nestled beneath a canopy of century-old oaks, The Grove is our family-friendly cabin. A generous living area, screened porch, and lofted bunks give everyone room to breathe.',
     amenities: ['Screened sleeping porch', 'Full kitchen', 'Lofted bunk room', 'Board games & books', 'Outdoor dining table'],
   },
   {
     name: 'The Ridgeline',
     meta: 'Sleeps 6 · 1,100 sq ft · 2 Kings + bunks',
-    image: 'The Ridgeline cabin',
-    imageSrc: 'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&w=800&q=80',
+    image: '/images/cabin-ridgeline.png',
     desc: 'Our largest cabin crowns a gentle rise with panoramic views in every direction. Two private bedrooms, a grand stone fireplace, and wraparound deck make this ideal for gatherings.',
     amenities: ['Stone fireplace', 'Wraparound deck', 'Full kitchen & dining', 'Two full bathrooms', 'Outdoor hot tub'],
   },

@@ -1,6 +1,5 @@
 import PageHero from '../components/PageHero';
 import Reveal from '../components/Reveal';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import CTA from '../components/CTA';
 
 const cocktails = [
@@ -42,7 +41,7 @@ export default function Cocktails() {
               <p>Illinois-distilled spirits form the backbone of our menu, enhanced with house-made syrups, garden-grown herbs, and foraged botanicals. Whether you settle into a leather chair by the fire or take your drink to the outdoor terrace, The Hearth is where evenings at Driftmoor begin and end.</p>
             </Reveal>
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Bartender crafting a cocktail at The Hearth" tall src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80" />
+              <img src="/images/bartender-cocktail.png" alt="Bartender crafting a cocktail at The Hearth" className="section-img section-img--tall" />
             </Reveal>
           </div>
         </div>

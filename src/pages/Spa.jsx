@@ -1,6 +1,5 @@
 import PageHero from '../components/PageHero';
 import Reveal from '../components/Reveal';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import CTA from '../components/CTA';
 
 const treatments = [
@@ -30,7 +29,7 @@ export default function Spa() {
         <div className="container">
           <div className="intro__grid intro__grid--reverse">
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Natural rock hot tub surrounded by boulders and ferns" tall src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?auto=format&fit=crop&w=1200&q=80" />
+              <img src="/images/spa-hot-tub.png" alt="Natural rock hot tub surrounded by boulders and ferns" className="section-img section-img--tall" />
             </Reveal>
             <Reveal>
               <span className="section__label">The Heart of the Spa</span>
@@ -65,13 +64,13 @@ export default function Spa() {
           <h2 className="section__title section__title--center">Spaces for Stillness</h2>
           <div className="gallery__grid">
             <Reveal className="gallery__item gallery__item--wide">
-              <ImagePlaceholder label="Open-air treatment pavilion at sunrise" src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80" />
+              <img src="/images/treatment-pavilion.png" alt="Open-air treatment pavilion at sunrise" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item">
-              <ImagePlaceholder label="Timber spa lodge interior" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" />
+              <img src="/images/spa-lodge-interior.png" alt="Timber spa lodge interior" className="section-img" />
             </Reveal>
             <Reveal className="gallery__item">
-              <ImagePlaceholder label="Relaxation deck with hammocks" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80" />
+              <img src="/images/relaxation-deck.png" alt="Relaxation deck with hammocks" className="section-img" />
             </Reveal>
           </div>
         </div>
@@ -89,7 +88,7 @@ export default function Spa() {
               </ul>
             </Reveal>
             <Reveal className="intro__image">
-              <ImagePlaceholder label="Morning yoga on the meadow deck" tall src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80" />
+              <img src="/images/morning-yoga.png" alt="Morning yoga on the meadow deck" className="section-img section-img--tall" />
             </Reveal>
           </div>
         </div>

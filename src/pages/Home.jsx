@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import Reveal from '../components/Reveal';
-import ImagePlaceholder from '../components/ImagePlaceholder';
 import CTA from '../components/CTA';
 
 export default function Home() {

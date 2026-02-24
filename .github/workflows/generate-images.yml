@@ -1,0 +1,113 @@
+name: Generate Site Images with DALL-E 3
+
+on:
+  workflow_dispatch:
+    inputs:
+      deployment:
+        description: 'Azure OpenAI DALL-E 3 deployment name'
+        required: true
+        default: 'dall-e-3'
+
+jobs:
+  generate:
+    name: Generate images and commit to branch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install openai requests Pillow
+
+      - name: Generate images
+        env:
+          AZURE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AZURE_OPENAI_ENDPOINT: https://kp-oai-documents-prod.openai.azure.com/
+          DEPLOYMENT: ${{ github.event.inputs.deployment }}
+        run: |
+          python3 - <<'PYEOF'
+          import os, base64, json, time
+          from openai import AzureOpenAI
+
+          client = AzureOpenAI(
+              api_key=os.environ["AZURE_OPENAI_API_KEY"],
+              azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+              api_version="2024-02-01",
+          )
+          deployment = os.environ.get("DEPLOYMENT", "dall-e-3")
+          out_dir = "public/images"
+          os.makedirs(out_dir, exist_ok=True)
+
+          images = [
+              # Home page
+              ("prairie-golden-hour",   "1024x1792", "Golden hour at an Illinois prairie, tallgrass swaying gently in warm amber and copper light, expansive sky ablaze with sunset colors, a winding path through the grass, peaceful solitude, wide-angle landscape photography, National Geographic style"),
+              ("morning-mist-meadow",   "1792x1024", "Ethereal morning mist rolling over a lush green meadow at a luxury wilderness retreat, ancient oak trees silhouetted in soft blue-grey light, single deer grazing in the distance, golden sunrise peeking through the mist, fine art landscape photography"),
+              ("cabin-interior-dusk",   "1024x1024", "Cozy luxury cabin interior at dusk, warm amber lamplight glowing through floor-to-ceiling windows revealing twilight forest outside, wood-burning stove with crackling fire, premium white linen bedding, exposed timber ceiling beams, Architectural Digest editorial photography"),
+              ("natural-rock-hot-tub-home", "1024x1024", "Natural stone hot tub outdoors at night surrounded by mossy boulders and ferns, steam rising from mineral water, candles placed on rocks, ancient oak canopy overhead, star-filled sky, luxury outdoor wellness, moody atmospheric photography"),
+              ("fireside-cocktails",    "1024x1024", "Two elegant craft cocktails on a weathered oak table beside a glowing outdoor campfire at night, bourbon in crystal lowball glasses garnished with fresh thyme, warm golden firelight, luxury glamping atmosphere, professional food and drink photography"),
+              ("farm-to-table-dinner",  "1792x1024", "Elegant farm-to-table dinner service in a warmly lit restored timber hall, long communal table laden with seasonal dishes, Edison bulb pendants, wildflower centerpieces, guests enjoying family-style dining, Bon Appétit editorial photography"),
+              # Cabins
+              ("cabin-exterior-twilight", "1024x1792", "Architect-designed luxury cabin in the woods at blue hour twilight, warm amber light glowing from large picture windows, surrounded by native Illinois tallgrass and oak trees, private deck with fire pit, moody atmospheric architectural photography"),
+              ("cabin-prairie",         "1024x1024", "Intimate modern luxury cabin surrounded by native tallgrass prairie at golden hour, floor-to-ceiling glass walls, private deck overlooking endless grass, Illinois countryside, high-end architectural lifestyle photography"),
+              ("cabin-grove",           "1024x1024", "Cozy luxury family cabin nestled beneath a canopy of century-old oak trees, screened sleeping porch, outdoor dining table set for four, dappled forest light, premium glamping atmosphere, architectural lifestyle photography"),
+              ("cabin-ridgeline",       "1024x1024", "Expansive luxury cabin crowning a gentle hill with panoramic views, wraparound deck, two adults relaxing outside at sunset with the Illinois countryside stretching to the horizon, stone fireplace glowing inside, luxury real estate photography"),
+              # Dining
+              ("chef-plating",         "1024x1792", "Skilled chef in white coat precisely plating an elegant seasonal farm-to-table dish with tweezers, microgreens and herb oil drops, dark moody kitchen, focused overhead spotlight, James Beard restaurant aesthetic, fine dining food photography"),
+              ("breakfast-basket",      "1024x1792", "Artisan wicker breakfast basket on a rustic cabin porch railing at dawn, filled with buttery croissants, seasonal berries, house-made granola, and a copper thermos, morning forest light, warm and inviting lifestyle photography"),
+              # Spa
+              ("spa-hot-tub",          "1024x1792", "Luxurious hand-built natural rock hot tub outdoors at night, steaming mineral water surrounded by mossy boulders and native ferns, ancient oak trees overhead, candles flickering, Milky Way stars visible, atmospheric luxury wellness photography"),
+              ("treatment-pavilion",    "1792x1024", "Open-air spa treatment pavilion at sunrise, billowing white linen curtains between timber posts, professional massage table draped in white, hanging lantern, fresh botanicals, soft golden morning light filtering through forest, luxury destination spa photography"),
+              ("spa-lodge-interior",    "1024x1024", "Serene timber spa lodge interior, stone fireplace crackling, leather armchairs with plush wool throws, dried botanical bundles, warm amber wall sconces, polished concrete floor, Architectural Digest luxury wellness photography"),
+              ("relaxation-deck",       "1024x1024", "Outdoor hammock deck strung between massive oak trees at dusk, warm string lights glowing, woven cotton hammocks, wooden deck railing, the forest stretching beyond, cozy luxury retreat atmosphere, lifestyle photography"),
+              ("morning-yoga",         "1024x1792", "Person in warrior yoga pose on an outdoor wooden deck at sunrise, morning mist rising from the meadow below, golden light, dew on the grass, serene Illinois countryside in the background, mindful wellness retreat photography"),
+              # Cocktails
+              ("bartender-cocktail",   "1024x1792", "Skilled bartender in a warmly lit craft cocktail bar, carefully muddling fresh herbs into an elegant glass, stone fireplace glowing in the background, curated bottle-lined shelf, warm amber light, moody intimate bar photography"),
+              ("outdoor-terrace",      "1024x1792", "Romantic outdoor bar terrace at dusk, warm Edison string lights draped overhead between wooden posts, leather chairs around oak tables, two craft cocktails in focus, surrounding forest silhouetted against deep indigo sky, luxury resort photography"),
+          ]
+
+          for name, size, prompt in images:
+              out_path = f"{out_dir}/{name}.png"
+              if os.path.exists(out_path):
+                  print(f"Skipping {name} (already exists)")
+                  continue
+              print(f"Generating {name} ({size})...")
+              try:
+                  response = client.images.generate(
+                      model=deployment,
+                      prompt=prompt,
+                      n=1,
+                      size=size,
+                      quality="standard",
+                      response_format="b64_json",
+                  )
+                  img_data = base64.b64decode(response.data[0].b64_json)
+                  with open(out_path, "wb") as f:
+                      f.write(img_data)
+                  print(f"  Saved {out_path} ({len(img_data)//1024}KB)")
+              except Exception as e:
+                  print(f"  ERROR generating {name}: {e}")
+              time.sleep(1)   # stay within rate limits
+
+          print("Done!")
+          PYEOF
+
+      - name: Commit generated images
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/images/*.png
+          if git diff --cached --quiet; then
+            echo "No new images to commit."
+          else
+            git commit -m "chore: add AI-generated site images via DALL-E 3"
+            git push
+          fi
